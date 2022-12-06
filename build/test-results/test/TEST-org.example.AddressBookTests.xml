@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.AddressBookTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-05T11:27:47" hostname="DESKTOP-G1G9RFQ" time="0.045">
-  <properties/>
-  <testcase name="testRemoveContact()" classname="org.example.AddressBookTests" time="0.045"/>
-  <system-out><![CDATA[[org.example.Contact@1e800aaa, org.example.Contact@185a6e9]
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
