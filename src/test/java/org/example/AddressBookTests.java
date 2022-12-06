@@ -11,8 +11,8 @@ public class AddressBookTests {
     public void testAddContact() {
         //Given
         AddressBook addressBook = new AddressBook();
-        Contact person1 = new Contact("Hubert", "Burdzy", "hubertb.98.hb@gmail.com", "510622046");
-        Contact person2 = new Contact("Sandra", "Kotlarek", "sandrakot168@gmail.com", "697225995");
+        Contact person1 = new Contact("Brad", "Kowalsky", "brad.kowalsky@gmail.com", "987654321");
+        Contact person2 = new Contact("Amy", "Smith", "amy.smith@gmail.com", "123456789");
 
         //When
         addressBook.addContact(person1);
@@ -27,8 +27,8 @@ public class AddressBookTests {
     public void testRemoveContact() {
         //Given
         AddressBook addressBook = new AddressBook();
-        Contact person1 = new Contact("Hubert", "Burdzy", "hubertb.98.hb@gmail.com", "510622046");
-        Contact person2 = new Contact("Sandra", "Kotlarek", "sandrakot168@gmail.com", "697225995");
+        Contact person1 = new Contact("Brad", "Kowalsky", "brad.kowalsky@gmail.com", "987654321");
+        Contact person2 = new Contact("Amy", "Smith", "amy.smith@gmail.com", "123456789");
 
         //When
         addressBook.addContact(person1);
