@@ -1,13 +1,21 @@
 package org.example;
 
 
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
+@Entity
+@Table(name="CONTACTS")
 public class Contact {
+    private Long id;
     private String name;
     private String lastname;
     private String email;
     private String phoneNumber;
+
+    public Contact() {
+    }
 
     public Contact(String name, String lastname, String email, String phoneNumber) {
         this.name = name;
@@ -16,39 +24,52 @@ public class Contact {
         this.phoneNumber = phoneNumber;
     }
 
-    public boolean isValidPhoneNumber() {
-        return phoneNumber.matches("^\\d{9}$");
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "ID",unique = true, nullable = false)
+    public Long getId() {
+        return id;
     }
 
+    @NotNull
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    @NotNull
+    @Column(name = "LASTNAME")
     public String getLastname() {
         return lastname;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
+    @Column(name = "EMAIL")
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
+    @Column(name = "PHONENUMBER")
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    private void setId(Long id) {
+        this.id = id;
+    }
+
+    private void setName(String name) {
+        this.name = name;
+    }
+
+    private void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    private void setEmail(String email) {
+        this.email = email;
+    }
+
+    private void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
